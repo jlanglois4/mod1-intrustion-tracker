@@ -11,13 +11,15 @@ low_activity = "Low"
 average_activity = "Average"
 high_activity = "High"
 critical_activity = "Critical"
+activity_level = ""
 
-activity_level_output = f"Activity level:"
 if avg_intrusions_per_day >= high_activity_upper_range:
-    print(activity_level_output, critical_activity)
+    activity_level = critical_activity
 elif avg_intrusions_per_day >= average_activity_upper_range:
-    print(activity_level_output, high_activity)
+    activity_level = high_activity
 elif avg_intrusions_per_day >= low_activity_upper_range:
-    print(activity_level_output, average_activity)
+    activity_level = average_activity
 else:
-    print(activity_level_output, low_activity)
+    activity_level = low_activity
+
+print(f"Activity level: {activity_level}")
