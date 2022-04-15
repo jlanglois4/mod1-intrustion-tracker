@@ -5,7 +5,7 @@ print(f"Average intrusions per day: {avg_intrusions_per_day:,.2f}")
 
 
 def range_calculator(avg_intrusions):
-    # lower_range, activity_level
+    # lower_range, activity_level string
 
     activity_level = ""
     activity_list = [
